@@ -1,0 +1,8 @@
+node_modules
+dist
+
+# Raw source material (Facebook grid screenshots); the site uses the crops in public/
+/media/
+
+# Local editor/agent settings
+/.claude/
