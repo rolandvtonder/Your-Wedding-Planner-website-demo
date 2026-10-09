@@ -7,12 +7,15 @@
  * and they'll sharpen up with no code changes.
  */
 
+/** Public files, resolved against the site's base path (e.g. a GitHub Pages sub-folder). */
+export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 export const brand = {
   name: 'Your Wedding Planner',
   email: 'Hello@yourweddingplanner.co.za',
   facebook: 'https://www.facebook.com/YourWeddingPlannerSA/',
-  logo: '/brand/logo.webp',
-  logoFallback: '/brand/logo.png',
+  logo: asset('brand/logo.webp'),
+  logoFallback: asset('brand/logo.png'),
 };
 
 export const nav = [
@@ -35,14 +38,14 @@ export const gallery = {
   heading: 'Love stories, frame by frame.',
   body: 'From the first look to the last dance — a few of the days we’ve had the honour of walking with our couples.',
   items: [
-    {tag: 'The ceremony', title: 'Just married', body: 'A circle of white blooms, a burst of joy, and a whole new chapter.', image: '/media/gallery/just-married.webp'},
-    {tag: 'Candlelight', title: 'The vows', body: 'A cellar lit by a hundred flames, and two promises that filled it.', image: '/media/gallery/the-vows.webp'},
-    {tag: 'Styling', title: 'Tablescapes', body: 'Brass candlesticks, soft linen and blooms gathered low and lush.', image: '/media/gallery/tablescape.webp'},
-    {tag: 'Portraits', title: 'Golden hour', body: 'The quiet ten minutes we always protect in the timeline.', image: '/media/gallery/golden-hour.webp'},
-    {tag: 'Colour', title: 'Blush & rose', body: 'Taper candles, blush napkins and a pop of red to make it sing.', image: '/media/gallery/styling.webp'},
-    {tag: 'The details', title: 'The cake', body: 'Proteas, eucalyptus and two small guests of honour on top.', image: '/media/gallery/the-cake.webp'},
-    {tag: 'Reception', title: 'Under chandeliers', body: 'One long table, deep velvet and every face lit up.', image: '/media/gallery/reception.webp'},
-    {tag: 'Forever', title: 'Happily ever after', body: 'The veil, the breeze, and the moment it all sinks in.', image: '/media/gallery/forever.webp'},
+    {tag: 'The ceremony', title: 'Just married', body: 'A circle of white blooms, a burst of joy, and a whole new chapter.', image: asset('media/gallery/just-married.webp')},
+    {tag: 'Candlelight', title: 'The vows', body: 'A cellar lit by a hundred flames, and two promises that filled it.', image: asset('media/gallery/the-vows.webp')},
+    {tag: 'Styling', title: 'Tablescapes', body: 'Brass candlesticks, soft linen and blooms gathered low and lush.', image: asset('media/gallery/tablescape.webp')},
+    {tag: 'Portraits', title: 'Golden hour', body: 'The quiet ten minutes we always protect in the timeline.', image: asset('media/gallery/golden-hour.webp')},
+    {tag: 'Colour', title: 'Blush & rose', body: 'Taper candles, blush napkins and a pop of red to make it sing.', image: asset('media/gallery/styling.webp')},
+    {tag: 'The details', title: 'The cake', body: 'Proteas, eucalyptus and two small guests of honour on top.', image: asset('media/gallery/the-cake.webp')},
+    {tag: 'Reception', title: 'Under chandeliers', body: 'One long table, deep velvet and every face lit up.', image: asset('media/gallery/reception.webp')},
+    {tag: 'Forever', title: 'Happily ever after', body: 'The veil, the breeze, and the moment it all sinks in.', image: asset('media/gallery/forever.webp')},
   ],
 };
 
@@ -71,7 +74,7 @@ export const services = {
       short: 'Full planning',
       body: 'From the first venue visit to the final farewell, we walk every step with you.',
       lines: ['Budget & timeline management', 'Venue & vendor sourcing', 'Design concept & styling', 'Full on-the-day coordination'],
-      image: '/media/services/full-planning.webp',
+      image: asset('media/services/full-planning.webp'),
       featured: true,
     },
     {
@@ -79,28 +82,28 @@ export const services = {
       short: 'Coordination',
       body: 'You’ve planned it beautifully — we’ll run it, so you can be fully present.',
       lines: ['Final vendor confirmations', 'Run-sheet & timeline', 'Ceremony & reception flow', 'Set-up & pack-down oversight'],
-      image: '/media/services/coordination.webp',
+      image: asset('media/services/coordination.webp'),
     },
     {
       name: 'Décor and Styling',
       short: 'Décor & styling',
       body: 'A look that feels like you, from ceremony arches to the last place card.',
       lines: ['Mood boards & concept', 'Florals, linen & tableware', 'Stationery & signage', 'Installation on the day'],
-      image: '/media/services/styling.webp',
+      image: asset('media/services/styling.webp'),
     },
     {
       name: 'Opulent Gifts',
       short: 'Opulent gifts',
       body: 'Beautifully curated gifts for your bridal party, your guests and each other.',
       lines: ['Bridal party boxes', 'Guest favours', 'Personalised keepsakes'],
-      image: '/media/services/gifts.webp',
+      image: asset('media/services/gifts.webp'),
     },
     {
       name: 'Concierge Services',
       short: 'Concierge',
       body: 'The extras, handled — so nothing slips through the cracks.',
       lines: ['Guest accommodation & transfers', 'Appointments & errands', 'Special requests, sorted'],
-      image: '/media/services/concierge.webp',
+      image: asset('media/services/concierge.webp'),
     },
   ],
   unsure: {
@@ -119,7 +122,7 @@ export const about = {
   ],
   signoff: 'With love,',
   signature: 'Your Wedding Planner',
-  image: '/media/about/planner.webp',
+  image: asset('media/about/planner.webp'),
   imageAlt: 'Your wedding planner, laughing, in a bridal boutique',
 };
 

@@ -1,5 +1,5 @@
 import {useEffect, useRef} from 'react';
-import {hero} from '../content';
+import {asset, hero} from '../content';
 import {useReducedMotion} from '../hooks/useReducedMotion';
 import {clamp, easeOutCubic, lerp, pinProgress, range} from '../lib/math';
 import {onFrame} from '../lib/scroll';
@@ -74,8 +74,8 @@ function Drapes() {
     <>
       <Drape className="absolute inset-y-0 left-0 w-[30vw] md:w-[22vw]" />
       <Drape className="absolute inset-y-0 right-0 w-[30vw] -scale-x-100 md:w-[22vw]" />
-      <img src="/layers/cluster-left.webp" alt="" aria-hidden="true" width={640} height={640} decoding="async" className={`${corner} -left-[3vmin]`} />
-      <img src="/layers/cluster-right.webp" alt="" aria-hidden="true" width={640} height={640} decoding="async" className={`${corner} -right-[3vmin] -scale-x-100`} />
+      <img src={asset('layers/cluster-left.webp')} alt="" aria-hidden="true" width={640} height={640} decoding="async" className={`${corner} -left-[3vmin]`} />
+      <img src={asset('layers/cluster-right.webp')} alt="" aria-hidden="true" width={640} height={640} decoding="async" className={`${corner} -right-[3vmin] -scale-x-100`} />
     </>
   );
 }
@@ -221,8 +221,8 @@ export function Veil() {
           <Drapes />
         ) : (
           <picture>
-            <source media="(max-width: 767px)" srcSet={`/layers/m/${name}.webp`} />
-            <img src={`/layers/d/${name}.webp`} alt="" aria-hidden="true" className={FIT} decoding="async" fetchPriority={name === 'sky' ? 'high' : 'auto'} />
+            <source media="(max-width: 767px)" srcSet={asset(`layers/m/${name}.webp`)} />
+            <img src={asset(`layers/d/${name}.webp`)} alt="" aria-hidden="true" className={FIT} decoding="async" fetchPriority={name === 'sky' ? 'high' : 'auto'} />
           </picture>
         )}
         {/* The lawn carries an ivory apron below it, so when it climbs it
