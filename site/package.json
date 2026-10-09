@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview --port=3006",
     "lint": "tsc --noEmit",
-    "layers": "node scripts/render-layers.mjs"
+    "layers": "node scripts/render-layers.mjs",
+    "publish": "vite build && node scripts/publish-root.mjs"
   },
   "dependencies": {
     "lenis": "^1.3.11",

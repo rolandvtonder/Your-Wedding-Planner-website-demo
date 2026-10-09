@@ -1,4 +1,6 @@
-# Builds the site and publishes it to the gh-pages branch on every push to main.
+# Builds site/ and publishes it to the gh-pages branch on every push to main.
+# (The built site is also committed at the repo root by `npm run publish`, so
+# Pages works whether it's set to serve main or gh-pages.)
 # Live at https://rolandvtonder.github.io/Your-Wedding-Planner-website-demo/
 name: Deploy to GitHub Pages
 
@@ -23,12 +25,13 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: site/package-lock.json
       - run: npm ci
+        working-directory: site
       - run: npm run build
-        env:
-          BASE_PATH: /${{ github.event.repository.name }}/
-      - name: Publish dist/ to gh-pages
-        working-directory: dist
+        working-directory: site
+      - name: Publish site/dist to gh-pages
+        working-directory: site/dist
         run: |
           touch .nojekyll
           git init -q -b gh-pages
