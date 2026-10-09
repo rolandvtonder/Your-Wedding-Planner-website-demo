@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#faf6ef" />
+    <title>Your Wedding Planner — Personalised wedding planning in South Africa</title>
+    <meta name="description" content="Your Wedding Planner is a personalised service: we walk the journey with our couples. Full wedding planning, on-the-day coordination, décor and styling, opulent gifts and concierge services." />
+    <meta property="og:title" content="Your Wedding Planner" />
+    <meta property="og:description" content="Personalised wedding planning — we walk the journey with you, from “yes” to “I do”." />
+    <meta property="og:type" content="website" />
+    <!-- Link previews (WhatsApp, Facebook, email) need absolute URLs. -->
+    <meta property="og:url" content="https://rolandvtonder.github.io/Your-Wedding-Planner-website-demo/" />
+    <meta property="og:image" content="https://rolandvtonder.github.io/Your-Wedding-Planner-website-demo/images/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/Your-Wedding-Planner-website-demo/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Caps: Montserrat (light, tracked — the logo's YOUR / PLANNER). Headings: Cormorant Garamond. Accent: Pinyon Script. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200..600&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="/Your-Wedding-Planner-website-demo/brand/logo.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/Your-Wedding-Planner-website-demo/layers/d/sky.webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="/Your-Wedding-Planner-website-demo/layers/m/sky.webp" media="(max-width: 767px)" />
+    <script type="module" crossorigin src="/Your-Wedding-Planner-website-demo/assets/index-67dWY3NW.js"></script>
+    <link rel="stylesheet" crossorigin href="/Your-Wedding-Planner-website-demo/assets/index-fRFoCCcX.css">
+  </head>
+  <body>
+    <div id="root">
+      <!-- Shown only until the app starts (React replaces it). If the app can't
+           start, the visitor sees why instead of a blank page. -->
+      <div id="boot" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:24px;background:#faf6ef;font-family:Montserrat,Arial,sans-serif;color:#5e554c;text-align:center">
+        <img src="/Your-Wedding-Planner-website-demo/brand/logo.png" alt="Your Wedding Planner" width="360" style="max-width:80vw;height:auto" />
+        <p id="boot-msg" style="letter-spacing:.2em;text-transform:uppercase;font-size:12px">Loading…</p>
+      </div>
+    </div>
+    <script>
+      // If the app fails to start, say so (and why) instead of leaving the page blank.
+      (function () {
+        function show(text) {
+          var m = document.getElementById('boot-msg');
+          if (m) m.innerHTML = text;
+        }
+        window.addEventListener('error', function (e) {
+          show('Sorry — this browser couldn’t open the site.<br>Please update your browser (Chrome, Edge, Safari or Firefox) and try again.<br><br><small style="text-transform:none;letter-spacing:0">' + String(e.message || e) + '</small>');
+        });
+        setTimeout(function () {
+          show('Still loading… if this message stays, please update your browser or try Chrome or Edge.');
+        }, 8000);
+      })();
+    </script>
+  </body>
+</html>
