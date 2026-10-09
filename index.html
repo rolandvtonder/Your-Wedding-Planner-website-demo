@@ -31,6 +31,28 @@
     <link rel="stylesheet" crossorigin href="/Your-Wedding-Planner-website-demo/assets/index-fRFoCCcX.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Shown only until the app starts (React replaces it). If the app can't
+           start, the visitor sees why instead of a blank page. -->
+      <div id="boot" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:24px;background:#faf6ef;font-family:Montserrat,Arial,sans-serif;color:#5e554c;text-align:center">
+        <img src="/Your-Wedding-Planner-website-demo/brand/logo.png" alt="Your Wedding Planner" width="360" style="max-width:80vw;height:auto" />
+        <p id="boot-msg" style="letter-spacing:.2em;text-transform:uppercase;font-size:12px">Loading…</p>
+      </div>
+    </div>
+    <script>
+      // If the app fails to start, say so (and why) instead of leaving the page blank.
+      (function () {
+        function show(text) {
+          var m = document.getElementById('boot-msg');
+          if (m) m.innerHTML = text;
+        }
+        window.addEventListener('error', function (e) {
+          show('Sorry — this browser couldn’t open the site.<br>Please update your browser (Chrome, Edge, Safari or Firefox) and try again.<br><br><small style="text-transform:none;letter-spacing:0">' + String(e.message || e) + '</small>');
+        });
+        setTimeout(function () {
+          show('Still loading… if this message stays, please update your browser or try Chrome or Edge.');
+        }, 8000);
+      })();
+    </script>
   </body>
 </html>
